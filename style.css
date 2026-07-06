@@ -1,3 +1,12 @@
+
+body{
+    width: 100%;
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+
+
 #top_header{
     display: flex;
     background-color:rgb(58, 58, 58) ;
@@ -18,10 +27,7 @@
     border-left: 1px solid black;
 }
 
-body{
-    width: 100%;
-    margin: 0px;
-}
+
 
 #search_bar{
     display: flex;
@@ -80,8 +86,11 @@ body{
 
 .listhead{
     padding: 5px;
-    cursor: pointer;
+    cursor: default;
     border-left: 1px solid black;
+    color: white;
+    font-weight: bolder;
+    
     
 }
 
@@ -95,26 +104,33 @@ body{
     position: absolute;
     display: none;
     background-color: gray;
+    font-size: 15px;
+    
+    
 
 }
 
-.sublist_head{
-    border-bottom: 2px solid blue;
-    border-start-end-radius: 10px;
-}
 
 .sublist{
     position: relative;
     display:inline-table;
     margin: 10px;
-    border: 3px solid rebeccapurple;
+    font-weight: bold;
+    cursor: default;
+    padding-right: 50px;
     
 }
 
 .sublist a{
     display: block;
-    font-size: small;
     margin-top: 4px;
+    font-weight: lighter;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+.sublist a:hover{
+    background-color: rgba(255, 0, 0, 0.267);
 }
 
 @keyframes transfer{
