@@ -3,6 +3,7 @@ body{
     width: 100%;
     margin: 0px;
     font-family: sans-serif;
+    overflow-x: hidden;
 }
 
 
@@ -140,18 +141,21 @@ body{
 
 #show-pictures{
     position: relative;
+    display: flex;
+    height: 350px;
+    
 }
 
 
 #ozgur_photo{
     position: absolute;
     width: 100%;
-    animation-name:  transfer;
-    animation-duration: 5s;
-    animation-direction: alternate;
+    animation-name:slide;
+    animation-duration: 10s;
+    animation-direction: alternate-reverse;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-    animation-delay: 5;
+    
 }
 
 
@@ -160,20 +164,78 @@ body{
 #ismail_photo{
     position: absolute;
     width: 100%;
-    animation-name:  transfer;
-    animation-duration: 5s;
-    animation-direction: alternate-reverse;
+    animation-name:slide;
+    animation-duration: 10s;
+    animation-direction: alternate;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
+   
   
 }
 
 
+.checkboxes input{
+
+    position: absolute;
+    z-index: 2;
+   bottom: 15px;
+   right: 544px;
+
+   
+
+}
+
+#show-pictures:has(.checkboxes input:checked) img {
+    animation-play-state: paused;
+}
+
+.img-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+   
+}
+.img-link a{
+    margin-right: 50px;
+}
+
+.img-link img{
+    width: 70%;
+}
+
+.img-links{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.img-links a{
+    width: 50%;
+}
+.img-links img{
+    height: 100%;
+    ali
+}
+#banner{
+    width: 522px;
+    height: 41px;
+}
+#odtuden{
+    width: 278px;
+    height: 42px;
+}
 
 @keyframes transfer{
     from{opacity: 0;}
     to{opacity: 1;}
     
 }
-
+@keyframes slide {
+    
+    0%,50%{ opacity: 1; }
+    60%,100%{ opacity: 0; }
+} 
 
