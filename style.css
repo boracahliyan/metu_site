@@ -1,0 +1,123 @@
+#top_header{
+    display: flex;
+    background-color:rgb(58, 58, 58) ;
+    margin: 0px;
+    width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    align-items: center; 
+    flex-wrap: wrap;
+}
+
+
+
+#top_header > a{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-left: 1px solid black;
+}
+
+body{
+    width: 100%;
+    margin: 0px;
+}
+
+#search_bar{
+    display: flex;
+    align-items: center;
+}
+
+#search_bar input{
+    width: 100px;
+    margin-right: 0px;
+}
+
+#search_bar button{
+    background-color: white;
+    border: none;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    margin: 0px;
+    height: 21.83px;
+}
+
+#socials img{
+    width: 15px;
+    background-color: red;
+    border-radius: 15px;
+    background-size: 30px;
+    margin-left: 5px;
+}
+
+#socials{
+    display: flex;
+    align-items: center;
+}
+
+#heads_middle{
+    display: flex;
+    color: red;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+}
+
+#heads_middle p{
+    font-size: smaller;
+    font-weight: bold;
+    font-family:sans-serif ;
+}
+
+#bottom_header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    flex-wrap: wrap;
+    
+}
+
+.listhead{
+    padding: 5px;
+    cursor: pointer;
+    border-left: 1px solid black;
+    
+}
+
+.lister:hover .list_elm {
+  display: block;
+  animation-name: transfer;
+  animation-duration: 1s;
+}
+
+.list_elm{
+    position: absolute;
+    display: none;
+    background-color: gray;
+
+}
+
+.sublist_head{
+    border-bottom: 2px solid blue;
+    border-start-end-radius: 10px;
+}
+
+.sublist{
+    position: relative;
+    display:inline-table;
+    margin: 10px;
+    border: 3px solid rebeccapurple;
+    
+}
+
+.sublist a{
+    display: block;
+    font-size: small;
+    margin-top: 4px;
+}
+
+@keyframes transfer{
+    to{opacity: 1;}
+    from{opacity: 0;}
+}
