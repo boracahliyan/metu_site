@@ -140,7 +140,7 @@ body{
 
 
 #show-pictures{
-    position: relative;
+    display: grid;
     display: flex;
     height: 350px;
     
@@ -148,13 +148,15 @@ body{
 
 
 #ozgur_photo{
-    position: absolute;
+   
     width: 100%;
     animation-name:slide;
     animation-duration: 10s;
     animation-direction: alternate-reverse;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
+    grid-row: 1;
+    grid-column:1;
     
 }
 
@@ -162,13 +164,15 @@ body{
 
 
 #ismail_photo{
-    position: absolute;
+    
     width: 100%;
     animation-name:slide;
     animation-duration: 10s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
+    grid-row: 1;
+    grid-column:1;
    
   
 }
