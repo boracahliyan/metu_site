@@ -4,6 +4,10 @@ body{
     margin: 0px;
     font-family: sans-serif;
     overflow-x: hidden;
+    max-width: 2000px;
+    min-width: 500px;
+    justify-self: center;
+    margin: 0 auto;
 }
 
 
@@ -141,8 +145,7 @@ body{
 
 #show-pictures{
     display: grid;
-    display: flex;
-    height: 350px;
+    position: relative;
     
 }
 
@@ -178,13 +181,17 @@ body{
 }
 
 
+.checkboxes{
+      grid-row: 1;
+    grid-column: 1;
+    z-index: 5;
+    align-self: end;     
+    justify-self: start;
+}
 .checkboxes input{
 
-    position: absolute;
-    z-index: 2;
-   bottom: 15px;
-   right: 544px;
-
+    
+   
    
 
 }
@@ -197,39 +204,200 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 70%;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 0 auto; 
    
 }
 .img-link a{
-    margin-right: 50px;
+    display: inline-block;
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: 30px;
+    margin: 20px ;
+    height: 2%;
+  
+  
 }
 
-.img-link img{
-    width: 70%;
+
+
+#tau img{
+    height: 100%;
+    width: auto;
 }
+
 
 .img-links{
     display: flex;
-    width: 100%;
-    justify-content: center;
     align-items: center;
-    
-    
+    justify-content: center;
+    width: 70%;
+    margin: 0 auto; 
+    flex-wrap: wrap;
+    gap: 20px;
 }
-.img-links a{
-    width: 50%;
-}
+
 .img-links img{
-    height: 100%;
+    width: 100%;
+   
+}
+
+.img-links a{
+    flex: 1 1 300px;
+    max-width: calc(50%-10px);
+    display: block;
+}
+
+
+#boxes{
+    gap: 1px;
+}
+
+#boxes a{
+    display: grid;
+    max-width: 268.05px;
+    height: 104px;
+    margin: 0 auto;
     
 }
-#banner{
-    width: 522px;
-    height: 41px;
+#boxes a div{
+    grid-row: 1;
+    grid-column:1;
+    z-index: 2;
+    align-self: self-end;
+    
+    justify-self: center;
+    background: linear-gradient(#5a5a5a00, #1a1a1a);
+    color: white;
+    width: 100%;
+    text-align: center;
+   
+   
+    
+   
+    
 }
-#odtuden{
-    width: 278px;
-    height: 42px;
+
+#boxes a img{
+    width: 100%;
+   
+    grid-row: 1;
+    grid-column:1;
+    
+  
+    
+}
+
+
+#event-links{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    flex-wrap: wrap;
+    gap: 10px;
+
+
+
+
+}
+
+.calendar-container{
+       height:100%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       background-color: rgb(236, 236, 236);
+       border-radius: 15px;
+    
+ 
+   
+}
+
+.calendar-container h2{
+    margin-top: 50px;
+    margin-left: 10px;
+    align-self: self-start;
+    text-decoration:underline ;
+    
+}
+
+.calendar-container iframe{
+       height:90%;
+    
+ 
+   
+}
+
+
+.quicklinks{
+    
+    background-image: url('pictures/Screenshot 2026-07-07 142921.png');
+    background-repeat: no-repeat;
+    background-size:100% ;
+    width: 531px;
+    height: 500px;
+    border-radius: 15px;
+    
+    
+}
+
+#all_links{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-top: 0px;
+    height: 15px;
+    background-color: rgba(0, 0, 0, 0.411);
+    width: 80px;
+    margin-left:450px ;
+    margin-top: 19px;
+    margin-bottom: 16px;
+    
+}
+
+#all_links div{
+     justify-content: end;
+    
+    align-items: center;
+    margin-top: 0px;
+    height: 15px;
+    width: 80px;
+    margin-top:4px ;
+}
+
+.quicklinks a div{
+    background-color: rgba(255, 0, 0, 0.247);
+    height: 100px;
+    width: 100px;
+    
+}
+
+.quicklinks a{
+   
+    height: 100px;
+    width: 100px;
+    margin-top: -5px;
+    
+}
+
+.top_box{
+    width: 100%;
+    row-gap: 50px;
+    padding-top: 10px;
+    column-gap: 30px;
+    row-gap: -100px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    
+   
+    
+
 }
 
 @keyframes transfer{
