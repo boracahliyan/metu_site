@@ -5,7 +5,6 @@ body{
     font-family: sans-serif;
     overflow-x: hidden;
     max-width: 2000px;
-    min-width: 500px;
     justify-self: center;
     margin: 0 auto;
 }
@@ -14,12 +13,13 @@ body{
 
 #top_header{
     display: flex;
+    flex-wrap: wrap;
     background-color:rgb(58, 58, 58) ;
     margin: 0px;
     width: 100%;
-    padding-left: 100px;
-    padding-right: 100px;
+   
     align-items: center; 
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -68,13 +68,24 @@ body{
 
 #heads_middle{
     display: flex;
+    flex-wrap: wrap;
     color: red;
     align-items: center;
     justify-content: center;
-    margin: 30px;
+ 
 }
 
+#heads_middle{
+    width: 100%;
+}
+
+#heads_middle img{
+    width: 100%;
+}
+
+
 #heads_middle p{
+   
     font-size: smaller;
     font-weight: bold;
     font-family:sans-serif ;
@@ -86,6 +97,7 @@ body{
     justify-content: center;
     background-color: red;
     flex-wrap: wrap;
+   
     
 }
 
@@ -95,8 +107,15 @@ body{
     border-left: 1px solid black;
     color: white;
     font-weight: bolder;
+    padding: 15px;
     
     
+}
+
+.listhead:hover{
+    cursor: pointer;
+    background-color: white;
+    color: red;
 }
 
 .lister:hover .list_elm {
@@ -141,6 +160,12 @@ body{
 .sublist a:hover{
     background-color: rgba(255, 0, 0, 0.267);
 }
+
+
+
+
+
+
 
 
 #show-pictures{
@@ -188,13 +213,7 @@ body{
     align-self: end;     
     justify-self: start;
 }
-.checkboxes input{
 
-    
-   
-   
-
-}
 
 #show-pictures:has(.checkboxes input:checked) img {
     animation-play-state: paused;
@@ -252,14 +271,19 @@ body{
 
 
 #boxes{
-    gap: 1px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    width: 80%;
+    gap: 20px;
+  
 }
 
 #boxes a{
     display: grid;
-    max-width: 268.05px;
-    height: 104px;
-    margin: 0 auto;
+    width: 300px;
+    
     
 }
 #boxes a div{
@@ -294,21 +318,21 @@ body{
 #event-links{
 
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
-    height: auto;
-    min-height: 500px;
-    padding: 20px 0;
-
-
+    width: 70%;
+    align-self: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1000px;
+   
 
 
 }
 
+
+
 .calendar-container{
-       height:500px;
+       height: 500px;
        display: flex;
        flex-direction: column;
        align-items: center;
@@ -330,81 +354,78 @@ body{
 
 .calendar-container iframe{
        height:90%;
-    
- 
-   
 }
 
 
-.quicklinks{
-    
-    background-image: url('pictures/Screenshot 2026-07-07 142921.png');
-    background-repeat: no-repeat;
-    background-size:100% ;
-    width: 531px;
-    height: 500px;
-    border-radius: 15px;
-    
-    
-}
 
 #all_links{
+
+    display: block;
+    margin-left: auto;
+    margin-top: 10px;
+    font-size:large;
+    text-decoration: none;
+    font-weight: bolder;
+    border: black dotted 3px;
+    border-radius: 10px;
+    color: black;
+    
+}
+
+#all_links:hover{
+    border-style: solid;
+}
+
+.quicklinks{
     display: flex;
-    justify-content: end;
-    align-items: center;
-    margin-top: 0px;
-    height: 15px;
-    background-color: rgba(0, 0, 0, 0.411);
-    width: 80px;
-    margin-left:450px ;
-    margin-top: 19px;
-    margin-bottom: 16px;
-    
-}
-
-#all_links div{
-     justify-content: end;
-    
-    align-items: center;
-    margin-top: 0px;
-    height: 15px;
-    width: 80px;
-    margin-top:4px ;
-}
-
-.quicklinks a div{
-    background-color: rgba(255, 0, 0, 0.247);
-    height: 100px;
-    width: 100px;
-    
-}
-
-.quicklinks a{
-   
-    height: 100px;
-    width: 100px;
-    margin-top: -5px;
-    
+    flex-direction: column;
+    width: 60%;
+    background-color: rgb(236, 236, 236);
+    border-radius: 15px;
 }
 
 .top_box{
-    width: 100%;
-    row-gap: 50px;
-    padding-top: 10px;
-    column-gap: 30px;
-    row-gap: -100px;
-    flex-wrap: wrap;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
+    gap: 10px;
     
    
-    
 
 }
+.top_box img{
+    width: 100px;
+}
+
+.top_box a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    max-width: 100px;
+    margin: 10px;
+}
+
+.top_box a:hover{
+    box-shadow: black 3px 3px 5px;
+
+  
+}
+
+.top_box p{
+    margin: 0px;
+    color: black;
+   
+}
+
+
 
 
 footer{
     background-color: rgb(73, 73, 73);
+    width: 100%;
 }
 
 footer img{
@@ -413,6 +434,7 @@ footer img{
 
 #top_footer{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 50px;
@@ -474,3 +496,36 @@ footer img{
     60%,100%{ opacity: 0; }
 } 
 
+@media (max-width: 480px) {
+
+    .listhead{
+        padding: 10px;
+    }
+
+    .lister:focus .list_elm,
+    .lister:focus-within .list_elm {
+    display: block;
+    animation-name: transfer;
+    animation-duration: 1s;
+}
+
+
+    #event-links{
+        justify-content: center;
+        
+    }
+
+    .quicklinks{
+        width: 100%;
+        
+    }
+
+  
+    .top_box img{
+        width: 80px;
+    }
+
+
+
+    
+}
