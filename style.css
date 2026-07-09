@@ -97,7 +97,7 @@ body{
     justify-content: center;
     background-color: red;
     flex-wrap: wrap;
-   
+    position: relative;
     
 }
 
@@ -126,6 +126,9 @@ body{
 
 .list_elm{
     position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
     display: none;
     background-color: white;
     font-size: 15px;
@@ -144,6 +147,7 @@ body{
     font-weight: bold;
     cursor: default;
     padding-right: 50px;
+    
     
 }
 
